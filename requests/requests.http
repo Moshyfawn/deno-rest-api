@@ -1,0 +1,25 @@
+@baseUrl = http://localhost:4000
+### Get all users
+GET {{baseUrl}}/users
+### Get user details by ID
+GET {{baseUrl}}/users/f4a3a3c2-84e7-44b9-9f7b-a091dde8fff7
+### Create user
+POST {{baseUrl}}/users
+content-type: application/json
+
+{
+  "name": "Oleg",
+  "role": "Front-end Developer",
+  "jiraAdmin": true
+}
+### Update user details by ID
+PUT {{baseUrl}}/users/f4a3a3c2-84e7-44b9-9f7b-a091dde8fff7
+content-type: application/json
+
+{
+  "name": "Oleg Butorov",
+  "role": "Full-stack Developer",
+  "jiraAdmin": true
+}
+### Delete user details by ID
+DELETE {{baseUrl}}/users/f4a3a3c2-84e7-44b9-9f7b-a091dde8fff7
